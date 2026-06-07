@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        font-family: "Khmer OS Battambang", "Hanuman", sans-serif;
+        background-color: #f4f6f9;
+        color: #333;
+        padding: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      form {
+        margin-bottom: 20px;
+      }
+
+      fieldset {
+        border: 2px solid #3b82f6;
+        border-radius: 8px;
+        padding: 15px 20px;
+        background-color: #ffffff;
+      }
+
+      legend {
+        font-weight: bold;
+        color: #1e3a8a;
+        padding: 0 10px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="date"],
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: inherit;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 5px;
+        cursor: pointer;
+      }
+
+      label {
+        font-weight: 500;
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      .button-group {
+        text-align: right;
+        margin-top: 15px;
+      }
+
+      button {
+        font-family: inherit;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.2s;
+        margin-left: 10px;
+      }
+
+      button[type="submit"] {
+        background-color: #10b981;
+        color: white;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #059669;
+      }
+
+      button[type="reset"] {
+        background-color: #ef4444;
+        color: white;
+      }
+
+      button[type="reset"]:hover {
+        background-color: #dc2626;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>១.ព័ត៌មានផ្ទាល់ខ្លួន</legend>
+        <label for="txtname">ឈ្មោះពេញៈ</label><br />
+        <input
+          type="text"
+          name="fullname"
+          id="txtname"
+          placeholder="បញ្ចូលឈ្មោះ"
+        /><br />
+
+        <label for="date">ថ្ងៃខែឆ្នាំកំណើត</label><br />
+        <input type="date" name="dob" id="date" /><br />
+
+        <label>ភេទៈ</label><br />
+        <input type="radio" name="gender" id="male" value="male" />ប្រុស
+        <input
+          type="radio"
+          name="gender"
+          id="female"
+          value="female"
+        />ស្រី<br />
+
+        <label for="province">ខេត្ត/រាធានីកំណើតៈ</label><br />
+        <select name="province" id="province">
+          <option value="">---ជ្រើសរើសខេត្ត/រាធានី---</option>
+          <option value="">រាធានីភ្នំពេញ</option>
+          <option value="battambang">បាត់ដំបង</option>
+          <option value="banteaymeanchey">បន្ទាយមានជ័យ</option>
+          <option value="siemreap">សៀមរាប</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>២.ព័ត៌មានសិក្សា</legend>
+        <label for="year">ឆ្នាំសិក្សា:</label><br />
+        <select name="academic_year" id="year">
+          <option value="1">ឆ្នាំទី១</option>
+          <option value="2">ឆ្នាំទី២</option>
+          <option value="3">ឆ្នាំទី៣</option>
+          <option value="4">ឆ្នាំទី៤</option></select
+        ><br />
+
+        <label>ជំនាញដែលចូលចិត្ត:</label><br />
+        <input type="checkbox" name="skills" value="web" />Web Dev <br />
+        <input type="checkbox" name="skills" value="uiux" />UI/UX Design <br />
+        <input type="checkbox" name="skills" value="networking" />Networking
+        <br />
+      </fieldset>
+
+      <fieldset>
+        <legend>៣.គណនីសុវត្ថិភាព</legend>
+        <label for="email">អុីមែល:</label><br />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="example@gmail.com"
+          required
+        /><br />
+
+        <label for="password">លេខកូដសម្ងាត់:</label><br />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="បញ្ចូលលេខកូដ"
+          required
+          maxlength="8"
+        /><br />
+      </fieldset>
+
+      <div class="button-group">
+        <button type="submit">រក្សាទុក(submit)</button>
+        <button type="reset">សម្អាត(clear)</button>
+      </div>
+    </form>
+  </body>
+</html>
